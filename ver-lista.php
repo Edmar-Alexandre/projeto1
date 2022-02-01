@@ -41,27 +41,6 @@ if (isset($_GET['reabrir'])){
 
 ?>
 
-
-
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de tarefas</title>
-    <style>
-        div.lista li.concluida{
-            color: green;
-        }
-    </style>
-</head>
-<body>
-    <h3>Tarefas</h3>
-    
-    <div class="lista">
-        <ul>
             
             <?php foreach($lista as $item):?>
                 <li <?= $item['concluida']?'class="concluida"': ''?>><?=$item['descricao']?>
@@ -73,10 +52,8 @@ if (isset($_GET['reabrir'])){
                     <?php endif; ?>
                     <a href="?excluir=<?=$item['id']?>"><input type="submit" value="Excluir"></a>
                 </li>
+               
             <?php endforeach; ?>
-        </ul>
-    </div>
-
-    <a href="index.html"><input type="submit" value="Add Tarefas"></a>
-</body>
-</html>
+   
+<a href="index.html"> <input type="submit" value="Add Tarefas"></a>
+                

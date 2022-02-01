@@ -11,3 +11,4 @@ if (isset($_POST['tarefa'])){
     header('Location: http://localhost/projeto/index.html');
 }
 
+?>
